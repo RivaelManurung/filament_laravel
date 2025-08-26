@@ -16,9 +16,6 @@ class Post extends Model
     ];
     public function author()
     {
-        // This assumes your posts table has a 'user_id' column.
-        // If the column name is 'author_id', you would use:
-        // return $this->belongsTo(User::class, 'author_id');
         return $this->belongsTo(User::class, 'user_id');
     }
 }
